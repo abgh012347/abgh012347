@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문자열 뒤집기</h1>
+    <textarea id="txt_ar" rows="1" cols="30" placeholder="입력할 값을 입력하세요."></textarea>
+    <button type="submit" onclick="reverse">검색</button>
+    <h2>결과:</h2>
+    <p id="result"></p>
+
+    <script>
+        function reverse(){
+            const first = document.getElementById("txt_ar").value;
+            const reverseText = first.split("").reverse().join("");
+            document.getElementById("result").innerText=reverseText;
+        }
+    </script>
+</body>
+</html>

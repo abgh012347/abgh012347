@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="chk1" onclick=checkedBox(chk1) type="checkbox" name ="myAdd" value="1500"><label for= "check1">추가채소 1500원</label><br>
+    <input id="chk2" onclick=checkedBox(chk2) type="checkbox" name ="myAdd" value="1000"><label for= "check2">추가음료 1000원</label><br>
+    <input id="chk3" onclick=checkedBox(chk3) type="checkbox" name ="myAdd" value="500"><label for= "check3">추가피클 500원</label><br>
+    <input type="button" value="reset" onclick="resetCheckbox()"><hr>
+    <p id="result"></p>
+    <script>
+        function resetCheckbox(){
+            chk1.checked = false;
+            chk2.checked = false;
+            chk3.checked = false;
+            document.getElementById("result").innerHTML = "추가금액 : 0원";
+        }
+        function checkedBox(chked){
+            document.getElementById("result").innerHTML = "추가금액 :"+document.getElementById(chked).value+"원";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         img {height:100px;
+            top: 100px;
+        }
+        
+        
+        /* @keyframes rotateX {
+            0% { transform: rotateX(0);}
+            100% {transform: rotateX(360deg);}
+        }
+        @keyframes rotatePX {
+            0% {transform: perspective(150px) rotateX(0);}
+            100% {transform: perspective(150px) rotateX(360deg);}
+        }
+        @keyframes rotatePY {
+            0% {transform: perspective(150px) rotateY(0);}
+            100% {transform: perspective(150px) rotateY(360deg);}
+        }  */
+        @keyframes rotateZ {
+            0% {
+                left : 100px;
+                
+                
+                 transform: scale(1);}
+            50% {
+                left:450px;
+                transform: scale(2);}
+                
+            100% {
+                left: 800px;
+                transform: scale(1);
+            }
+        }
+        /* @keyframes skew {
+            0%, 100% {transform: skew(0,0);}
+            50% {transform: skew(40deg,40deg);}
+        } */
+    </style>
+</head>
+<body>
+    <!-- <img src="media2/italy.jpg" style="animation: scale 5s infinite;"><br>
+    <img src="media2/italy1.jpg" style="animation: rotateX 5s infinite;">
+    <img src="media2/italy1.jpg" style="animation: rotatePX 5s infinite;"><br>
+    <img src="media2/italy3.jpg" style="animation: rotatePY 5s infinite;"><br> -->
+    <img src="https://via.placeholder.com/100/0000FF/FF0000" style="animation: rotateZ 5s infinite alternate; position: absolute;",height="80px"><br>
+    <!-- <img src="media2/italy5.jpg" style="animation: skew 5s infinite;"><br> -->
+</body>
+</html>

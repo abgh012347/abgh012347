@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <style>
+        .container{
+         width: 300px;
+         margin: 0 auto;  
+         position: absolute;
+         top: 50%;
+         left:50%;
+         transform: translate(-50%,-50%);
+       } 
+       p {
+           text-align: center;
+           
+       }
+       div {
+           border : 1px solid black;
+           visibility: hidden;
+           text-align: center;
+           padding: 10px;
+       }
+       .btn1 {
+            /* background-color: red; */
+            text-align: center;
+                    
+       }
+   </style>
+    <h2>My Custom Alert Example</h2><br>
+    <input type="button" value="Show Custom Alert" onclick="onclicked()">
+    <div class="container" id="div1" >
+        <p>This is a custom alert!</p>
+        <input type="button" value="close" id="btn1" style="background-color: red;color: white;" onclick="closeclicked()">
+        </div>
+    <script>
+        function onclicked() {
+            let div1 = document.getElementById("div1");
+            div1.style.visibility = 'visible';
+        }
+        function closeclicked() {
+            let div1 = document.getElementById("div1");
+            div1.style.visibility = 'hidden';
+        }
+    </script>
+</body>
+</html>

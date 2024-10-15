@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("내부 자바스크립트로 작성한 것<hr>");
+        // 내부 자바스크립트 작성은 괜찮음
+    </script>
+        <script src="script01.js">
+            // 외부 자바스크립트 가져올떄는 항상 헤드에 있어야함
+    
+        </script>
+</head>
+<body>
+    <a href="#" onclick="document.write('onclick 태그의 자바 스크립트')">
+        눌러보세요!</a><hr>
+    <a href="javascript:alert('href 태그의 자바스크립트')">
+        안 누르실 거에요?</a>
+
+</body>
+</html>

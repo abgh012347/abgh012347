@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>단어 첫 글자 대문자로 변환</h1>
+    <textarea id="txt_arr" rows="4" cols="50" placeholder="값을 입력해주세요."></textarea><br>
+    <button type="submit" onclick="first_change()">변환</button>
+    <h2>결과 : </h2>
+    <p id="result"> </p>
+    <script>
+        function first_change(){
+            const normal = document.getElementById("txt_arr").value;
+            const splitArr = normal.split(' ');
+          
+            // for(let i=0;i<splitArr.length;i++){
+            //     splitArr[i] = splitArr[i].charAt(0).toUpperCase() + splitArr[i].slice(1);;
+            // }.join(' ');
+            const final_result = splitArr.map((word)=>{
+                return word.charAt(0).toUpperCase()+word.slice(1);
+            })
+            document.getElementById("result").innerText=final_result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문자열에서 단어 찾기</h1>
+    <textarea id ="ta_" rows="4" cols="50" placeholder="여기에 문장을 입력하세요."></textarea><br>
+    <input type ="text" id="char_search" placeholder="찾을 단어를 입력하세요.">
+    <button type = "submit" onclick="find()">단어 카운트</button><hr>
+    <h2>결과:</h2>
+    <p id="result">단어 출현 횟수 : 0</p>
+    
+
+    <script>
+        function find() {
+            const finder = document.getElementById("ta_").value;
+            const word = document.getElementById("char_search").value;
+            const lowerText = finder.toLowerCase();
+            const lowerWord = word.toLowerCase();
+            const splitArr = lowerText.split(lowerWord);
+            const count = splitArr.length-1;
+            document.getElementById("result").innerText=`단어 출현 횟수 : ${count}`;
+        }
+    </script>
+</body>
+</html>
