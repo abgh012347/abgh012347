@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Window Resize Event Example</h2>
+    <h3 id="wdht"></h3>
+    
+    <script>
+        function winResize() {
+            let wid_size = window.innerWidth;
+            let hei_size = window.innerHeight;
+            document.getElementById("wdht").innerText =
+            ("Width: "+wid_size+"px, Height: "+hei_size+"px");
+        }
+        winResize();
+        window.addEventListener("resize",winResize);
+    </script>
+</body>
+</html>

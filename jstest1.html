@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: 10px auto;
+            /* border: 1px solid #000000; */
+            position: relative;
+        }
+       
+        button {
+            z-index: 2;
+        }
+        .container img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        .back {
+            text-align: left;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .next {
+            text-align: right;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+      
+    </style>
+</head>
+<body>
+    
+    <h1>이미지 슬라이더</h1>
+    <div class="container">
+        <div id = "inside1">
+            <img src="media2/africa3.jpg">     
+        </div>
+        <div id = "inside2">
+            <input type="button" value="이전" id="back" onclick="back()" style="background-color: rgba(0,0,0,0.2);color: white;">
+            <input type="button" value="다음" id="next" onclick="next()" style="background-color: rgba(0,0,0,0.2);color: white;">
+        </div>
+    </div>
+
+   
+</body>
+</html>
