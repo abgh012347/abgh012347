@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 50px;
+            text-align: center;
+        }
+        div {
+                border-radius: 50%;
+                background-color: yellow;
+                display: inline-block;
+                width: 35pt;
+                height: 35pt;
+                /* visibility: hidden; */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>로또 번호 생성기</h1>
+    <button onclick="lotto_create()">로또 번호 생성</button><br><br>
+    <div>
+        <b id="lotto_1" style="font-size:25pt;"></b>
+    </div>
+    <div>
+        <b id="lotto_2" style="font-size:25pt;"></b>
+    </div>
+    <div>
+        <b id="lotto_3" style="font-size:25pt;"></b>  
+    </div>  
+    <div>
+        <b id="lotto_4" style="font-size:25pt;"></b> 
+    </div>
+    <div>
+        <b id="lotto_5" style="font-size:25pt;"></b>   
+    </div>
+    <div>
+        <b id="lotto_6" style="font-size:25pt;"></b>
+    </div>
+       
+    <script>
+        function lotto_create() {
+            let lotto_num1 = Math.floor(Math.random() * 46); 
+            let lotto_num2 = Math.floor(Math.random() * 46); 
+            let lotto_num3 = Math.floor(Math.random() * 46); 
+            let lotto_num4 = Math.floor(Math.random() * 46); 
+            let lotto_num5 = Math.floor(Math.random() * 46); 
+            let lotto_num6 = Math.floor(Math.random() * 46); 
+            
+            // document.getElementById("div1").style.visibility = "visible";
+            // document.getElementById("div2").style.visibility = "visible";
+            // document.getElementById("div3").style.visibility = "visible";
+            // document.getElementById("div4").style.visibility = "visible";
+            // document.getElementById("div5").style.visibility = "visible";
+            // document.getElementById("div6").style.visibility = "visible";
+
+            document.getElementById("lotto_1").innerText = lotto_num1;
+            document.getElementById("lotto_2").innerText = lotto_num2;
+            document.getElementById("lotto_3").innerText = lotto_num3;
+            document.getElementById("lotto_4").innerText = lotto_num4;
+            document.getElementById("lotto_5").innerText = lotto_num5;
+            document.getElementById("lotto_6").innerText = lotto_num6;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h2>location 객체 속성</h2>
+    <div id="location-properties">
+
+    </div>
+    <script>
+        const locationInfo =`
+            <p><strong>href:</strong>${location.href}</p>
+            <p><strong>protocol:</strong>${location.protocol}</p>
+            <p><strong>host:</strong>${location.host}</p>
+            <p><strong>hostname:</strong>${location.hostname}</p>
+            <p><strong>port:</strong>${location.port}</p>
+            <p><strong>pathname:</strong>${location.pathname}</p>
+            <p><strong>search:</strong>${location.search}</p>
+            <p><strong>hash:</strong>${location.hash}</p>
+            <p><strong>hash:</strong>${location.hash}</p>
+            `;
+            document.getElementById("location-properties").innerHTML = locationInfo;
+    </script>
+    
+</body>
+</html>

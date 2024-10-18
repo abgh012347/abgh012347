@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>history API 예제</h2>
+    <p>현재 URL : <span id="current-url"></span></p>
+    <button id="pushStateButton">pushState()로 상태 추가</button>
+    <button id="replaceStateButton">replaceState()로 상태 변경</button>
+    <script>
+        const currentUrlElement = document.getElementById("current-url");
+        currentUrlElement.textContent = window.location.href;
+
+        document.getElementById("pushStateButton").addEventListener("click",function() {
+            const state = {page:"pushState"};
+            const title = "PushState 예제";
+            const newUrl = window.location.origin + "/new-page";
+            history.pushState(state,title,newUrl);
+            currentUrlElement.textContent = window.location.href;
+            alert("pushState로 새로운 페이지를 추가했습니다.");
+        });
+
+        document.getElementById("replaceStateButton").addEventListener("click",function() {
+            const state = {page: "replaceState"};
+            const title = "ReplaceState 예제";
+            const newUrl = window.location.origin + "/replaced-page";
+            history.replaceState(state,title,newUrl);
+            currentUrlElement.textContent = window.location.href;
+            alert("replaceState로 현재 페이지를 변경했습니다.");
+        });
+        window.onpopstate = function(event) {
+            if(event.state) {
+                // alert(`이전 상태로 돌아왔습니다. 페이지: ${event.state.page}`);
+                window.location.reload();
+
+            }
+            else{
+                alert('기록이 없습니다.');
+            }
+        }
+    </script>
+</body>
+</html>

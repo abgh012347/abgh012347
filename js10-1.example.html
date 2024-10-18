@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" onclick="openWin()">누르면 새 창이 열립니다.</a><hr>
+    <a href="#" onclick="closeWin()">열린 창 닫기</a>
+    <script>
+        let nw;
+        function openWin() {
+            nw = open("", "_blank","width=700, height=400, left=10,top=10");
+            nw.document.write("<h2>여기는 새 창</h2>");
+        }
+        function closeWin() {
+            if (nw)
+                nw.close();
+        }
+    </script>
+</body>
+</html>

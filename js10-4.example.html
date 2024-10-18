@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><b>innerHeight 미사용</b><br> 창을 위아래로 늘이거나 줄여보자</div>
+    <div class="flex_h" id="changeColor"><b>innerHeight 사용</b><br>
+    창을 위아래로 늘이거나 줄여보자</div>
+    <script>
+        function adjustHeight() {
+            const height = window.innerHeight;
+            const divBox = document.getElementById('changeColor');
+
+            if(height<=(window.screen.height * 0.5) && height > (window.screen.height * 0.3))
+            divBox.style.background = '#bfb';
+            else if (height <=(window.screen.height * 0.3))
+            divBox.style.background = '#bbf';
+            else   
+            divBox.style.background = '#fbb';
+        }
+        adjustHeight();
+        addEventListener('resize',adjustHeight);
+    </script>
+</body>
+</html>
